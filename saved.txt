@@ -1,0 +1,44 @@
+  const [showAlert, setShowAlert] = useState(false);
+  const [variant, setVariant] = useState("");
+    {/* <UIAlert variant={variant} show={showAlert} setShow={setShowAlert} /> */}
+      {/* 
+      <Container className="mt-5">
+        <Row className="justify-content-between">
+          <Col sm={4} className="d-flex justify-content-center">
+            <Button
+              variant="outline-primary"
+              className="btn-lg rounded-0"
+              onClick={() => {
+                setVariant("primary");
+                setShowAlert(true);
+              }}
+            >
+              Show Primary Alert
+            </Button>
+          </Col>
+          <Col sm={4} className="d-flex justify-content-center">
+            <Button
+              variant="outline-danger"
+              className="btn-lg rounded-0"
+              onClick={() => {
+                setVariant("danger");
+                setShowAlert(true);
+              }}
+            >
+              Show Danger Alert
+            </Button>
+          </Col>
+          <Col sm={4} className="d-flex justify-content-center">
+            <Button
+              variant="outline-success"
+              className="btn-lg rounded-0"
+              onClick={() => {
+                setVariant("success");
+                setShowAlert(true);
+              }}
+            >
+              Show success Alert
+            </Button>
+          </Col>
+        </Row>
+      </Container> */}
