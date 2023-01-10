@@ -1,0 +1,22 @@
+.auth-form {
+    background-color: #ffffffa6;
+    box-shadow: 10px 10px 59px 0px #cfb7e3ca;
+    border: 1px solid #cbbed3b4;
+    padding: 2rem;
+    border-radius: .5rem;
+    width: 350px;
+    margin: 50px auto;
+    transition: all ease-in-out;
+}
+
+.division {
+    height: 50px;
+    width: 50px;
+    padding: .5rem;
+    border-radius: 100%
+}
+@media (min-width: 320px) and (max-width: 776px) {
+    .auth-form  {
+        margin-top: 80px;
+    }
+}

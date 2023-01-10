@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@100;200;300;400;500;600;700;800&display=swap');
+
+body {
+    position: relative;
+    min-height: 100vh;
+    height: auto;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+
+ul {
+    list-style: none !important;
+}
+
+.link {
+    text-decoration: none !important;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.pos-fixed {
+    position: fixed;
+    width: auto;
+}
+
+.pos-fixed.top {
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.loader-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+}
+
+.loader {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.loginPageOuterContainer {
+    position: relative;
+    height: auto;
+    overflow-y: hidden;
+}
+
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background: radial-gradient(circle, #4a45527d 0%, #8122dab5 100%);
+    z-index: 999;
+}
+
+.modalBody {
+    margin-top: 50px;
+    z-index: 100;
+    min-width: 300px;
+    max-width: 75%;
+    padding: 1rem;
+    position: fixed;
+    top: 100px
+}
+
+input::placeholder {
+    font-size: 1rem;
+}
+
+.input-control.fieldError>.form-control {
+    color: #d968aa !important;
+    /* background-color: red; */
+}
+
+.input-control.fieldError>label {
+    margin: 0 !important;
+    animation: fadeIn 0.2s ease-in-out forwards 0.25s;
+}
+
+.input-control.fieldError>.form-control {
+    transition: all 0.25s ease-in-out;
+    border: 1px solid #de1f8f !important;
+}
+
+
+.pagenotfound {
+    position: relative;
+    overflow: hidden;
+}
+
+.heroImage {
+    animation: spin 10s linear infinite;
+}
+
+.home {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mail-item {
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+    transition: all 0.35s ease-in;
+}
+
+.mail-item:hover {
+    background-color: #afa0be2b;
+}
+
+.mailContent>* {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.main-section {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+
+}
+
+.sidebar .sidemenu {
+    background-color: #afa0be2b;
+    padding: 0;
+}
+
+.sidebar .sidemenu>.sideNavLink {
+    display: block;
+    text-decoration: none !important;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    background-color: #280352c8;
+    border-bottom: 1px solid #ffffff7f;
+    transition: all 0.5s ease-in;
+}
+
+.sidebar .sidemenu>.sideNavLink:hover {
+    background-color: #903fed;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+.mailEditor {
+    max-width: 100%;
+}
+
+.ProseMirror {
+    padding: 10px;
+    color: #363232;
+    border: 1px solid #85878a5a;
+    background: white;
+    border-radius: 0 0 5px 5px;
+    height: 180px;
+    overflow-y: auto;
+}
+
+.ProseMirror:focus {
+    border: none;
+    outline: 1px solid #b2b9c3;
+}
+
+.ProseMirror>*+* {
+    margin-top: 0.75em;
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+    padding: 0 2rem;
+}
+
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3,
+.ProseMirror h4,
+.ProseMirror h5,
+.ProseMirror h6 {
+    line-height: 1.1;
+}
+
+.ProseMirror code {
+    background-color: #bec6cf;
+    color: #fff;
+}
+
+.ProseMirror pre {
+    background: #4e4848;
+    color: #fff;
+    font-family: "JetBrainsMono", monospace;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.ProseMirror code {
+    color: inherit;
+    padding: 0;
+    background: none;
+    font-size: 0.8rem;
+}
+
+.ProseMirror blockquote {
+    padding-left: 1rem;
+    border-left: 3px solid #999999;
+}
+
+.ProseMirror hr {
+    border: none;
+    border-top: 3px solid #999999;
+    margin: 2rem 0;
+}
+
+.ProseMirror ul {
+    list-style: circle;
+
+}
+
+.ProseMirror ul li::before {
+    content: "\2022";
+    position: absolute;
+    left: 20px;
+    /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #181616;
+}
+
+/* ............................ */
+.textEditor {
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: 5px solid grey;
+}
+
+
+
+.menuBar {
+    background-color: #ebe0f8d2;
+    max-width: 100%;
+    padding-bottom: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+}
+
+.menuBar button {
+    font-size: 10px;
+    width: max-content;
+    margin: 7px;
+    margin-right: 15px;
+    outline: none;
+    border: 2px solid grey;
+    background: none;
+    color: #312f2f;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.heading3 {
+    font-size: 15px;
+}
+
+button.is-active {
+    background: #313032;
+    color: #fff;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        scale: 1;
+    }
+
+    100% {
+        scale: 0;
+    }
+}

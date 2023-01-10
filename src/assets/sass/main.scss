@@ -1,0 +1,29 @@
+$theme-colors: (
+    "primary": #8659cf,
+    "success":#327856,
+    "secondary": #276696,
+    "danger": #e7127d,
+    "info": #808080e5,
+    "warning": #ebc771,
+    "light": #fffbfb,
+    "dark": #2e1f41,
+);
+$form-label-color: #75717161;
+$input-border-color: #b36ec68f;
+$input-focus-box-shadow: 0px 2px 31px -19px rgba(152,61,209,1);
+$input-placeholder-color: #3b383f53;
+$form-label-font-weight: 100 !default;
+
+
+@import "../../../node_modules/bootstrap/scss/_functions.scss";
+@import "../../../node_modules/bootstrap/scss/_variables.scss";
+
+$custom-theme-colors: (
+    "altdark" : #222425,
+    "altlight" : #f2ebfa,
+    "altdanger":#d63d5695,
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss"
