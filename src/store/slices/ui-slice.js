@@ -6,6 +6,7 @@ const uiSlice = createSlice({
     isloading: false,
     modalVisible: false,
   },
+  showSideNav: false,
   reducers: {
     toggleUILoader: (state) => {
       state.isloading = !state.isloading;
@@ -16,12 +17,11 @@ const uiSlice = createSlice({
     hideUIModal: (state) => {
       state.modalVisible = false;
     },
+    toggleSideNav: (state) => {
+      state.showSideNav = !state.showSideNav;
+    },
   },
 });
 
 export default uiSlice.reducer;
-export const {
-  toggleUILoader,
-  showUIModal,
-  hideUIModal,
-} = uiSlice.actions;
+export const { toggleUILoader, showUIModal, hideUIModal, toggleSideNav } = uiSlice.actions;

@@ -3,8 +3,9 @@ import { GoMail } from "react-icons/go";
 import { Link, Outlet } from "react-router-dom";
 import { MdMarkEmailRead } from "react-icons/md";
 import { useSelector } from "react-redux";
-import useFetchMails from "../../../hooks/useFetchMails";
+import { TbMailOff } from "react-icons/tb";
 
+import useFetchMails from "../../../hooks/useFetchMails";
 import UILoader from "../../UI/UILoader";
 let initialLoad = true;
 
@@ -28,7 +29,7 @@ const SentBox = () => {
             marginTop: 56,
           }}
         >
-          {sentBox.length > 0 &&
+          {sentBox.length > 0 ? (
             sentBox.map((mail) => {
               return (
                 <Link className="link" to={mail.id}>
@@ -42,7 +43,7 @@ const SentBox = () => {
                           {mail.unread ? (
                             <span className="mailUnreadIcon">
                               <GoMail
-                                className="text-danger me-2"
+                                className="text-info me-2"
                                 style={{
                                   fontSize: 30,
                                 }}
@@ -58,10 +59,8 @@ const SentBox = () => {
                               />
                             </span>
                           )}
-                          <span className="text-info">From</span>
-                          <span className="text-primary ms-1">
-                            {mail.sender}
-                          </span>
+                          <span className="text-info">To</span>
+                          <span className="text-primary ms-1">{mail.to}</span>
                         </p>
                       </Col>
                       <Col sm={12}>
@@ -80,7 +79,29 @@ const SentBox = () => {
                   </div>
                 </Link>
               );
-            })}
+            })
+          ) : (
+            <div
+              className="mails-empty-icon"
+              style={{
+                marginTop: 100,
+                height: "400",
+                width: "100%",
+              }}
+            >
+              <div>
+                <TbMailOff
+                  style={{
+                    height: "100px",
+                    width: "100px",
+                    color: "grey",
+                    margin: "0 auto",
+                  }}
+                />
+              </div>
+              <h1 className="text-center fw-bold text-info">No mails</h1>
+            </div>
+          )}
         </div>
       </div>
       {isloading && <UILoader />}

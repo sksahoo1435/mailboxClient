@@ -57,7 +57,7 @@ ul {
     right: 0;
     height: 100vh;
     width: 100%;
-    background: radial-gradient(circle, #4a45527d 0%, #8122dab5 100%);
+    background: radial-gradient(circle, #4a45527d 0%, #7e6794f1 100%);
     z-index: 999;
 }
 
@@ -75,11 +75,6 @@ input::placeholder {
     font-size: 1rem;
 }
 
-.input-control.fieldError>.form-control {
-    color: #d968aa !important;
-    /* background-color: red; */
-}
-
 .input-control.fieldError>label {
     margin: 0 !important;
     animation: fadeIn 0.2s ease-in-out forwards 0.25s;
@@ -94,10 +89,6 @@ input::placeholder {
 .pagenotfound {
     position: relative;
     overflow: hidden;
-}
-
-.heroImage {
-    animation: spin 10s linear infinite;
 }
 
 .home {
@@ -120,11 +111,8 @@ input::placeholder {
     margin: 0 !important;
 }
 
-.main-section {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 3fr 9fr;
-
+.sidebar {
+    width: 200px;
 }
 
 .sidebar .sidemenu {
@@ -133,32 +121,29 @@ input::placeholder {
 }
 
 .sidebar .sidemenu>.sideNavLink {
-    display: block;
+    display: flex;
+    justify-content: start;
+    align-items: center;
     text-decoration: none !important;
     color: #fff;
     padding: 0.5rem 1rem;
     text-transform: uppercase;
-    background-color: #280352c8;
-    border-bottom: 1px solid #ffffff7f;
-    transition: all 0.5s ease-in;
+    background-color: #482178;
+    border-bottom: 1px solid #ffffff3b;
+    transition: all 0.25s ease-in;
 }
 
 .sidebar .sidemenu>.sideNavLink:hover {
-    background-color: #903fed;
+    background-color: #744f9c;
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
+.mails-empty-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
 }
-
-
-
 
 .mailEditor {
     max-width: 100%;
@@ -170,7 +155,7 @@ input::placeholder {
     border: 1px solid #85878a5a;
     background: white;
     border-radius: 0 0 5px 5px;
-    height: 180px;
+    height: 200px;
     overflow-y: auto;
 }
 
@@ -251,22 +236,23 @@ input::placeholder {
 
 
 .menuBar {
-    background-color: #ebe0f8d2;
+    background-color: #5f5d621e;
     max-width: 100%;
-    padding-bottom: 5px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    padding: 5px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    /* justify-content: center; */
 }
 
 .menuBar button {
     font-size: 10px;
     width: max-content;
-    margin: 7px;
-    margin-right: 15px;
+    padding: 0.25rem;
     outline: none;
-    border: 2px solid grey;
+    border: 2px solid #504a5068;
     background: none;
-    color: #312f2f;
+    color: #585353;
     cursor: pointer;
     display: flex;
     align-items: center;

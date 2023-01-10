@@ -108,7 +108,7 @@ export const modalVariants = {
   backdropVisible: {
     opacity: 1,
     transition: {
-      ease: "easeIn",
+      ease: "easeInOut",
       duration: 0.25,
       when: "beforeChildren",
       staggerChildren: 0.14,
@@ -123,21 +123,20 @@ export const modalVariants = {
   },
   overlayHidden: {
     x: 0,
-    y: "-100vh",
+    y: "0",
     opacity: 0,
   },
   overlayVisble: {
-    y: -100,
+    y: -120,
     x: 0,
     opacity: 1,
     transition: {
-      type: "spring",
-      stiffness: 50,
-      duration: 1,
+      type: "tween",
+      duration: 0.22,
     },
   },
   overlayExit: {
-    y: "100vh",
+    opacity: 0,
   },
 };
 
@@ -188,15 +187,15 @@ export const feildErrorVariants = {
     opacity: 1,
     transition: {
       type: "tween",
-      delay: 0.5,
-      duration: 1,
+      delay: 0.2,
+      duration: 0.25,
       ease: "easeOut",
     },
   },
   exit: {
     opacity: 0,
     transition: {
-      duration: 0.8,
+      duration: 0.5,
       ease: "easeOut",
     },
   },

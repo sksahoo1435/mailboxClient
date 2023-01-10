@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-import { DB_URL } from "../../../data/firebaseAuthCredentials";
 import UIAnimatedModal from "../../UI/UIAnimatedModal";
 import UIForm from "../../UI/UIForm";
 import {
@@ -20,6 +19,7 @@ import PreviewMail from "./PreviewMail";
 
 import { clearMailContent } from "../../../store/slices/mail-slice";
 import { showUIModal } from "../../../store/slices/ui-slice";
+import { DB_URL } from "../../../data/firebaseAuthCredentials";
 
 const ComposeMail = () => {
   const navigate = useNavigate();
@@ -35,7 +35,7 @@ const ComposeMail = () => {
       errorMsg: "",
     };
   }, []);
-  
+
   const [showModal, setShowModal] = useState(true);
   const [email, setEmail] = useState({ ...initialFieldState });
   const [subject, setSubject] = useState({ ...initialFieldState });
@@ -49,6 +49,7 @@ const ComposeMail = () => {
     const PAYLOAD = {
       mailContent: mailContent,
       sender: senderEmail,
+      to: email.value,
       unread: true,
       subject: subject.value,
     };
@@ -208,7 +209,7 @@ const ComposeMail = () => {
         showModal={showModal}
         style={{
           width: "81%",
-          height: "90%",
+          height: "auto",
           maxHeight: "100%",
         }}
       />

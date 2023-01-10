@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
+
 import { DB_URL } from "../data/firebaseAuthCredentials";
+
 const useGetMailByID = (inbox, id) => {
   const { email } = useSelector((state) => state.auth);
   const { sender, subject, mailContent } = inbox.find((mail) => mail.id === id);

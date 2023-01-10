@@ -25,6 +25,7 @@ import SentBox from "./components/Home/Sentbox/SentBox";
 
 import useGetAuth from "./hooks/useGetAuth";
 import useGetUser from "./hooks/useGetUser";
+import ViewSentboxMail from "./components/Home/Sentbox/ViewSentboxMail";
 // import useRedirect from "./hooks/useRedirect";
 
 function App() {
@@ -39,7 +40,6 @@ function App() {
 
   return (
     <>
-      {/* <AnimatePresence> */}
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<LoginRegister />} />
         {!isEmailVerified && (
@@ -51,7 +51,9 @@ function App() {
             <Route path="inbox" element={<Inbox />}>
               <Route path=":id" element={<ViewInboxMail />} />
             </Route>
-            <Route path="sentbox" element={<SentBox />} />
+            <Route path="sentbox" element={<SentBox />}>
+            <Route path=":id" element={<ViewSentboxMail />} />
+            </Route>
           </Route>
         )}
         <Route path="*" element={<PageNotFound />} />
