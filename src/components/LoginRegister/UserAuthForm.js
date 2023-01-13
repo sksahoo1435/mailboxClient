@@ -364,13 +364,7 @@ const AuthForm = () => {
       </motion.div>
       {loading && <UILoader />}
       {error && <UIAlert message={error} className="bg-danger" />}
-      {/* {authSuccess && isPassReset && (
-        <UIAlert
-          message="Verification link sent. Check your inbox"
-          className="bg-primary"
-        /> 
-      )}
-      */}
+
     </>
   );
 };

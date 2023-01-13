@@ -35,5 +35,3 @@ const useGetMailByID = (inbox, id) => {
 };
 
 export default useGetMailByID;
-
-//

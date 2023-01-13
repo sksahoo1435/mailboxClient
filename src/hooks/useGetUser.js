@@ -10,7 +10,6 @@ const useGetUser = () => {
   const dispatch = useDispatch();
   const idToken = useSelector((state) => state.auth.idToken);
 
-  // console.log(idToken)
   useEffect(() => {
     async function checkIfEmailVerfified() {
       const getUserData = async () => {
@@ -29,7 +28,7 @@ const useGetUser = () => {
       try {
         await getUserData();
       } catch (error) {
-        // console.log(error);
+        alert(error);
       }
     }
 
